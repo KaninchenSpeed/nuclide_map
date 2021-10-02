@@ -5,18 +5,18 @@ export interface isotop {
     isotop_name: string
     isotop_symbol: string
     metastabil: boolean
-    neutronen: number
-    masse: string
-    halbwertszeit: 'stable' | string
+    neutronen: number //neutrons
+    masse: string //mass
+    halbwertszeit: 'stable' | string //half-life
     zerfall: zerfall
 }
 
 export interface Element {
     element: {
-        name: string
-        symbol: string
+        name: string //name
+        symbol: string //short form (H, He, Os)
     }
     isotopes: isotop[]
 }
 
-export type file = Element[]
+export type file = Element[] //File defs
